@@ -9,7 +9,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (firstName && lastName) {
-      setFullName(`Full Name: ${firstName} ${lastName}`);
+      setFullName(`${firstName} ${lastName}`);
     } else {
       setFullName("");
     }
@@ -45,7 +45,7 @@ function App() {
           <button type="submit">Submit</button>
         </div>
       </form>
-      <p>{fullName}</p>
+      {fullName && <p>Full Name: {fullName}</p>}
     </div>
   );
 }

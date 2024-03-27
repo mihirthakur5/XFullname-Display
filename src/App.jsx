@@ -10,6 +10,8 @@ function App() {
     e.preventDefault();
     if (firstName && lastName) {
       setFullName(`Full Name: ${firstName} ${lastName}`);
+    } else {
+      setFullName("");
     }
   };
 
